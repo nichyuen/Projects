@@ -28,6 +28,10 @@ To conclude as a success classification model, the **minimum accepting metric ha
 ### Notebooks:
 - 01_Cleaning&EDA
 - 02_Modeling
+
+### Data:
+The image data and h5 files of model callbacks are located in google drive which can be access [here](https://drive.google.com/drive/folders/1HnPLc6HtejySnRiP5WkKGoh_Aj-815Kl?usp=sharing).
+
 ---
 ## Approach
 ---
