@@ -32,6 +32,9 @@ To conclude as a success classification model, the **minimum accepting metric ha
 ### Data:
 The image data and h5 files of model callbacks are located in google drive which can be access [here](https://drive.google.com/drive/folders/1HnPLc6HtejySnRiP5WkKGoh_Aj-815Kl?usp=sharing).
 
+### Streamlit App:
+Access to the streamlit app [here](https://greeneye-by-nicholas-yuen.streamlit.app/)
+
 ---
 ## Approach
 ---
@@ -115,4 +118,4 @@ Despite the model being poorer than other models in classifying images with wate
 - There are many other existing CNN architectures that extracts the image features differently that have yet to be tested to solve this problem which might produce better results. Therefore, it can be explore with the use of [Neural Architecture Search](https://towardsdatascience.com/what-is-neural-architecture-search-and-why-should-you-care-1e22393de461) to "gridsearch" over the best CNN architectures and even its parameters.
 - The model in current state can detect decently on visual symptoms of diseased plants but not able to classify the type of disease based on specific/different symptoms which would be useful as different disease requires different course of actions to protect the crops. Additionally, similar works can be done on other common local produce and their common diseases.
 - Image classification on the presence of common and harmful pests such as the [Diamondback Moth](https://www.sfa.gov.sg/food-for-thought/article/detail/new-method-to-control-dbm#:~:text=The%20DBM%20is%20one%20of%20the%20most%20destructive%20insect%20pests%20of%20brassica%20crops) which thrives in local conditions and pose a threat on the yield of vegetables.
-- Scale the [current deployed app](https://diseased-veg-image-classifier.streamlit.app/) to accept live feed of images to monitor crops as its current state only accept single images being passed manually which can be roll out to farmers for their self use.    
+- Scale the [current deployed app](https://greeneye-by-nicholas-yuen.streamlit.app/) to accept live feed of images to monitor crops as its current state only accept single images being passed manually which can be roll out to farmers for their self use.    
