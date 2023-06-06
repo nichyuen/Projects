@@ -1,1 +1,0 @@
-This folder holds the file, cofig.toml, in the hidden .folder, .streamlit, which is use to configure the theme of the streamlit app.
