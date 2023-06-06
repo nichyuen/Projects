@@ -1,3 +1,5 @@
-# theming-showcase
+# Streamlit App
 
-This is an example app showcasing how to use themes in [Streamlit](https://streamlit.io/). See the app live [here](https://share.streamlit.io/streamlit/theming-showcase/main). For more info, check out our [docs](https://docs.streamlit.io/en/stable/main_concepts.html#themes) and [blog post](https://blog.streamlit.io/introducing-theming/).
+Files in this folder is for the function of the streamlit app created for the capstone project, GreenEye: Computer Vision for Preliminary Detection of Plant Disease. 
+
+Feel free to try out the app [here](https://diseased-veg-image-classifier.streamlit.app/)
