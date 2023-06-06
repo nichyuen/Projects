@@ -1,6 +1,6 @@
 # <font color='green'>GreenEye</font>: Computer Vision for Preliminary Detection of Plant Disease
 
-![Header](hydroponic.img)
+![Header](https://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/hydroponic%20img.jpg)
 
 ---
 ## Introduction
@@ -45,7 +45,7 @@ Visual symptoms of downy mildew involves yellow blemishes on the leaves. In atte
 General approach consist of selection of pre-trained [Convolutional Neural Network](https://www.techtarget.com/searchenterpriseai/definition/convolutional-neural-network#:~:text=A%20CNN%20is%20a%20kind,the%20network%20architecture%20of%20choice.) (CNN) and adjusments to its parameters and to top it off with a standardized self-defined fully connected layer.
 
 How it works:
-![CNN infographic](CNN_infographic.img)
+![CNN infographic](Chttps://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/CNN%20infographic%20basic.png)
 
 #### Choice of CNNs
 1. [MobileNetV2](https://www.mathworks.com/help/deeplearning/ref/mobilenetv2.html)
@@ -53,7 +53,7 @@ How it works:
 - MobileNetV2 is a CNN architecture designed for mobile and embedded devices. It uses [depthwise separable convolutions](https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728) to reduce computational complexity with a more efficient method used to convolute images.Thus it is choosen as it maintains accuracy and provide good balance between computational efficiency and performance in image classification tasks. 
 
 - Infographic of this feature as shown below:
-![Depthwise seperable info](depthwise_infograph.img)
+![Depthwise seperable info](https://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/depthwise%20seperable%20convultion%20infograph.png)
 
 2. [MobileNetV3](https://arxiv.org/pdf/1905.02244v5.pdf)
 
@@ -62,7 +62,7 @@ How it works:
     - h-swish: Activation function that modifies the swish function, a function that is more robust than the ReLU due to its nonlinearity characteristic. The h-swish reduces computational cost as it avoids costly operations as compared to other activation functions.
     
 - Infographic of the Squeeze & Excitation feature:
-![Squeeze & Excitation](S&E_infograph.img)
+![Squeeze & Excitation](https://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/squeeze_excite.png)
 
 3. [InceptionResNetV2](https://www.mathworks.com/help/deeplearning/ref/inceptionresnetv2.html)
 
@@ -71,10 +71,10 @@ How it works:
     - Residual block: Shortcut connections that bypass layers in the network to create shorter gradient paths for faster training and better learning process as the information of the input are passed through these residual blocks along the training phase.
     
 - Infographic of the parallel convolutional branch:
-![Parallel Convolutional Branch](S&E_infograph.img)
+![Parallel Convolutional Branch](https://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/inception.png)
 
 - Infographic of residual block:
-![Residual Block](S&E_infograph.img)
+![Residual Block](https://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/resblock.png)
 
 ### Model Performance Summary
 
