@@ -64,7 +64,7 @@ How it works:
 
 2. [MobileNetV3](https://arxiv.org/pdf/1905.02244v5.pdf)
 
-- MobileNetV3, an improved version from MobileNetV2, with the additional features of [Squeeze & Exicitation](https://towardsdatascience.com/squeeze-and-excitation-networks-9ef5e71eacd7) and [h-swish](https://arxiv.org/pdf/1905.02244v5.pdf) to further improve feature extraction of images and computational efficiency. 
+- MobileNetV3, an improved version from MobileNetV2, with the additional features of [Squeeze & Excitation](https://towardsdatascience.com/squeeze-and-excitation-networks-9ef5e71eacd7) and [h-swish](https://arxiv.org/pdf/1905.02244v5.pdf) to further improve feature extraction of images and computational efficiency. 
     - Squeeze & Excitation: More detailed feature extraction from squeezing each channel of the image to a 1D vector with channel-wise information and through learning each channel's importance to assign respective weights to be use for rescaling on the features map. 
     - h-swish: Activation function that modifies the swish function, a function that is more robust than the ReLU due to its nonlinearity characteristic. The h-swish reduces computational cost as it avoids costly operations as compared to other activation functions.
     
