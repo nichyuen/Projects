@@ -52,7 +52,7 @@ Visual symptoms of downy mildew involves yellow blemishes on the leaves. In atte
 General approach consist of selection of pre-trained [Convolutional Neural Network](https://www.techtarget.com/searchenterpriseai/definition/convolutional-neural-network#:~:text=A%20CNN%20is%20a%20kind,the%20network%20architecture%20of%20choice.) (CNN) and adjusments to its parameters and to top it off with a standardized self-defined fully connected layer.
 
 How it works:
-![CNN infographic]([https://git.generalassemb.ly/nichyuen/capstone/blob/master/README%20images/CNN%20infographic%20basic.png](https://github.com/nichyuen/Projects/blob/main/Capstone_ComputerVision_Classification/README%20images/CNN%20infographic%20basic.png))
+![CNN infographic](https://github.com/nichyuen/Projects/blob/main/Capstone_ComputerVision_Classification/README%20images/CNN%20infographic%20basic.png)
 
 #### Choice of CNNs
 1. [MobileNetV2](https://www.mathworks.com/help/deeplearning/ref/mobilenetv2.html)
