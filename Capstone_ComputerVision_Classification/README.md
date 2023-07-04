@@ -80,6 +80,8 @@ How it works:
     - Residual block: Shortcut connections that bypass layers in the network to create shorter gradient paths for faster training and better learning process as the information of the input are passed through these residual blocks along the training phase.
     
 - Infographic of the parallel convolutional branch:
+
+  
 ![Parallel Convolutional Branch](https://github.com/nichyuen/Projects/blob/main/Capstone_ComputerVision_Classification/README%20images/inception.png)
 
 - Infographic of residual block:
