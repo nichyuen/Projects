@@ -1,182 +1,82 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 3: Web APIs & NLP
+# Mental Health for Today's Youth
+**Problem Statement**<br>
+MOH will want to intstill preventive measures such as hate speech or online bullying detection on social platforms that youths frequent (eg. Tiktok, Youtube, Twitch). Thus the purpose of this project is on creating a model to effectively filter text comments with elements of hateful sentiments on such platforms. 
 
-### Description
+As an analyst in MOH, the task at hand to have an effective classifying model to process text comments 
 
-In week four we've learned about a few different classifiers. In week five we'll learn about webscraping, APIs, and Natural Language Processing (NLP). This project will put those skills to the test.
+- Acceptance performance metric:
+        - >0.75 for Recall, since the main objective is to effectively filter hateful comments (i.e Minimise false negatives).
+        - >0.65 for Precision, less emphasis on minimising false positives but still important to a degree to ensure freedom of speech is maintained.
 
-For project 3, your goal is two-fold:
-1. You'll collect posts from two subreddits of your choosing. You can use [Pushshift's](https://github.com/pushshift/api) API or any other low-code platform of the same. 
-Alternatively, you can web-scrape or use any low-code platform, eg., parse-hub, collect data from twitter, wiki, facebook, insta etc.
-1. You'll then use NLP to train a classifier on which subreddit (or other sub-sections based on the site you choose to scrape your data from) a given post came from. This is a binary classification problem.
+**Notebooks**<br>
 
-##### About Pushshift's API
-
-Pushshift's API is fairly straightforward. For example, if I want the posts from [`/r/boardgames`](https://www.reddit.com/r/boardgames), all I have to do is use the following url: https://api.pushshift.io/reddit/search/submission?subreddit=boardgames
-
-To help you get started, we have a primer video on how to use the API: https://youtu.be/AcrjEWsMi_E
-
-**NOTE:** Pushshift now limits you to 250 posts per request (no longer the 500 in the screencast).
-
-### Requirements
-
-- Gather and prepare your data using the `requests` library.
-- **Create and compare at least two models**. They must be Naive Bayes and Random Forest classifiers. You can include other models: logistic regression, KNN, SVM, etc.
-- A Jupyter Notebook with your analysis for a peer audience of data scientists.
-- An executive summary of your results.
-- A short presentation outlining your process and findings for a semi-technical audience.
-
----
-
-### Necessary Deliverables / Submission
-
-- Code must be in at least one clearly commented Jupyter Notebook.
-- A readme/executive summary in markdown.
-- You must submit your slide deck as a PDF.
-- Materials must be submitted by the specified date given by the Instructional Team through your GitHub account repo shared with the Instructional Team.
-
----
-
-## Presentation Structure
-
-- **Presentation Time: 15 minutes**
-- Presentations will be 15 minutes. You can use inspiration from the [ignite talks](http://www.ignitetalks.io/) framework to design your presentation (its fun!). Learn more about the [ignite style](https://speakingaboutpresenting.com/content/fast-ignite-presentation/) 
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to a non-technical audience.
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
-
----
-
-## Rubric
-Teaching team will evaluate your project using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
-
-**Note:** Presentation will be done as a group while codes will be prepared and submitted by each student.
-
-For Project 3 the evaluation categories are as follows:<br>
-
-**The Data Science Process**
-- Problem Statement
-- Data Collection
-- Data Cleaning & EDA
-- Preprocessing & Modeling
-- Evaluation and Conceptual Understanding
-- Conclusion and Recommendations
-
-**Organization and Professionalism**
-- Organization
-- Visualizations
-- Python Syntax and Control Flow
-- Presentation
-
-**Scores will be out of 30 points based on the 10 categories in the rubric.** <br>
-*3 points per section*<br>
-
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
+00_DataCollection<br>
+01_Cleaning-EDA<br>
+02_Modeling<br>
 
 
-### The Data Science Process
+**README Overview**<br>
+1. Data<br>
+2. Approach<br>
+3. Models Performance<br>
+4. Conclusion<br>
 
-**Problem Statement**
-- Is it clear what the goal of the project is?
-- What type of model will be developed?
-- How will success be evaluated?
-- Is the scope of the project appropriate?
-- Is it clear who cares about this or why this is important to investigate?
-- Does the student consider the audience and the primary and secondary stakeholders?
+# 1. Data:
+The data used in this project is sourced from using Google's [Youtube API](https://developers.google.com/youtube/v3). The comments extracted are from selected videos which are popular among Youth (eg. Logan Paul, MrBeast) to have a more relevant analysis to the problem at hand. The modelling process will be carried out with the assistance from google's [Perspective](https://developers.perspectiveapi.com/s/about-the-api?language=en_US) in the labeling of about 35,000 comments.
 
-**Data Collection**
-- Was enough data gathered to generate a significant result?
-- Was data collected that was useful and relevant to the project?
-- Was data collection and storage optimized through custom functions, pipelines, and/or automation?
-- Was thought given to the server receiving the requests such as considering number of requests per second?
-
-**Data Cleaning and EDA**
-- Are missing values imputed/handled appropriately?
-- Are distributions examined and described?
-- Are outliers identified and addressed?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-- Does the student address whether or not they are likely to be able to answer their problem statement with the provided data given what they've discovered during EDA?
-
-**Preprocessing and Modeling**
-- Is text data successfully converted to a matrix representation?
-- Are methods such as stop words, stemming, and lemmatization explored?
-- Does the student properly split and/or sample the data for validation/training purposes?
-- Does the student test and evaluate a variety of models to identify a production algorithm (**AT MINIMUM:** Naive Bayes and Random Forest)?
-- Does the student defend their choice of production model relevant to the data at hand and the problem?
-- Does the student explain how the model works and evaluate its performance successes/downfalls?
-
-**Evaluation and Conceptual Understanding**
-- Does the student accurately identify and explain the baseline score?
-- Does the student select and use metrics relevant to the problem objective?
-- Does the student interpret the results of their model for purposes of inference?
-- Is domain knowledge demonstrated when interpreting results?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
-
-**Conclusion and Recommendations**
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-- Does the conclusion answer the original problem statement?
-- Does the student address how findings of this research can be applied for the benefit of stakeholders?
-- Are future steps to move the project forward identified?
+Summary of dataframe that is worked on:
+|Feature/Column|Description|
+|---|---|
+|text_translated|Youtube videos' comments that are translated to english|---|---|
+|likeCount|Amount of likes given by viewers of the comment|---|---|
+|TOXICITY|Attribute score (range from 0 to 1) on the level of Toxicity of the comment by Perspective (weighted at 0.4). Higher score implies higher level of toxicity|---|---|
+|INSULT|Attribute score (range from 0 to 1) of the comment being insulting by Perspective(weighted at 0.25). Higher score implies comment contains more insulting context|---|---|
+|IDENTITY_ATTACK|Attribute score (range from 0 to 1) of the comment targeting specific groups of individuals by Perspective(weighted at 0.25). Higher score implies comment have words that discriminate groups of individuals|---|---|
+|THREAT|Attribute score (range from 0 to 1) of the comment posing as threats in hurting individual's life by Perspective(weighted at 0.1). Higher score implies comment contains threatful context|---|---|
+|weight_mean|Weighted average of the attribute scores. Higher score implies comment contains higher degree of hateful context|---|---|
+|hateful|Classification on whether the comment is contains hateful context (0: Non-hateful, 1: Hateful)|---|---|<br>
 
 
-### Organization and Professionalism
+# 2. Approach:
 
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
+|Approach|Description|
+|:---|:---|
+|Data size|9 columns, 61,646 rows|
+|Data Cleaning & Processing|<ul><li>Overall duplications check</li><li> Individual feature data check</li><li>Drop redundant and irrelevant features</li><li>Checking for null values</li><li>Removal of HTML tags<li>Translation of comments to english<li>Labeling with Google's Perspective through aggregating  weighted mean<li>Dataframe has 34,484 rows  after cleaning|
+|EDA|<ul><li>Distribution of data balance</li><li>Distribution of attribute scores</li><li>Distribution between amount of likes and attributes of comments</li><li>Spread between each attributes</li><li>Common words in exhibiting the types of attributes|
+|Modelling|<ul><li>Preprocessing<ul><li>Stemming of tokens</li><li>TF-IDF vectorize</li><li>Oversampling of minority data</li></ul><li>Approach 1A: Based model <ul><li>Use of Naive Bayes as benchmark model to have base understanding on metrics</li></ul><li>Approach 1B: Oversample minority on based model</li><ul><li>Using same set of hyperparameters with oversampled minority(hateful comments) data using RandomOversampler</li></ul><li>Approach 2A: Attempts to reduce Overfitting</li><ul><li>Use of ridge regularization from Logistic Regression</li></ul><li>Approach 2A*: Tweaking decision threshold </li><ul><li>To maximise Recall through tradeoff of Precision</li></ul><li>Approach 3: 2nd attempt to reduce Overfitting </li><ul><li>Use of Random Forest classifier</li></ul>|
 
-**Visualizations**
-- Are sufficient visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Are plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
+# 3. Models Performance:
 
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Are `sklearn` and `NLTK` methods used appropriately?
+**Overview of Models performance:**
 
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
 
----
+|Approach|Description on best parameters|Metrics|Conclusion|
+|-|-|-|-|
+|1A|TF-IDF Vectorization<ul><li>english stopwords filter</li><li>max document frequency:90%</li><li>min document frequency:3times</li><li>uni/bi-gram</li></ul><br>Naive Bayes classification|Recall<ul><li>0.1684(test)</li><li>0.1815(train)</li></ul><br>Precision<ul><li>0.8876(test)<li>0.8947(train)</li></ul>|Poor metrics likely due to imbalanced data|
+|1B|TF-IDF Vectorization<ul><li>english stopwords filter</li><li>max document frequency:90%</li><li>min document frequency:2times</li><li>uni/bi-gram</li></ul>Naive Bayes classification<br><br>Oversampler<ul><li>minority data(hateful comments)</li></ul>|Recall<ul><li>0.6631(test)</li><li>0.9942(train)</li></ul><br>Precision<ul><li>0.3459(test)</li><li>0.9480(train)</li></ul>AUC-PR: 0.5544|Overfitting model with low scores|
+|2A|TF-IDF Vectorization<ul><li>english stopwords filter</li><li>max document frequency:90%</li><li>min document frequency:2times</li><li>uni/bi-gram</li><li>max features: 10000</li></ul><br>Logistic Regression<ul><li>C:1</li><li>solver:'liblinear'</li></ul><br><br>Oversampler<li>minority data(hateful comments)|Recall<ul><li>0.7719(test)<li>0.9931(train)</li></ul><br>Precision<ul><li>0.7154(test)<li>0.9840(train)</li></ul><br>AUC-PR: 0.7339|Overfitting model with improved scores|
+|2A*|Same parameters as 2A with adjusment to decision threshold to 0.4104|Recall<ul><li>0.8124(test)</li></ul><br>Precision<ul><li>0.6524(test)</li></ul>|Overfitting model with further improvment to Recall with the tradeoff of Precision|
+|3|TF-IDF Vectorization<li>english stopwords filter<li>max document frequency:90%<li>min document frequency:2times<li>uni-gram<li>max features: 10000</li><br>Random Forest classifier<li>C:1<li>solver:'liblinear'<br>Oversampler<li>minority data(hateful comments)|Recall<ul><li>0.8210(test with decision threshold adjustment)<li>0.8420(train)</ul><br>Precision<ul><li>0.6332(test with decision threshold adjustment)<li>0.9690(train)</li></ul><br>AUC-PR: 0.7293|Improved scores on Recall and overfitting has significantly reduced in addition with adjustment of decision threshold to 0.49|
 
-### Why did we choose this project for you?
-This project covers three of the biggest concepts we cover in the class: Classification Modeling, Natural Language Processing and Data Wrangling/Acquisition.
 
-Part 1 of the project focuses on **Data wrangling/gathering/acquisition**. This is a very important skill as not all the data you will need will be in clean CSVs or a single table in SQL.  There is a good chance that wherever you land you will have to gather some data from some unstructured/semi-structured sources; when possible, requesting information from an API, but often scraping it because they don't have an API (or it's terribly documented).
+**Best Performing Model: Approach 3**<br>
+    
+This model is selected for the classifier given the metric in focus (Recall) have been satisfied (>0.75 Recall score), its secondary objective (>0.6 Precision score) was slightly underacheived implying that the model will likely have more cases of False positives than False negatives. 
 
-Part 2 of the project focuses on **Natural Language Processing** and converting standard text data (like Titles and Comments) into a format that allows us to analyze it and use it in modeling.
+It is also noted that there is overfitting based on the Precision metric (test: 0.596 & train: 0.964) which implies that the model aggressive in classifying comments to be hateful.
 
-Part 3 of the project focuses on **Classification Modeling**.  Given that project 2 was a regression focused problem, we needed to give you a classification focused problem to practice the various models, means of assessment and preprocessing associated with classification.   
+However, the classification model is still useful to effectively identify potential hateful comments which can act as a primary filter for the user before a second in-person check can take place which saves time and resources for the user. For comments that are found to have non-hateful context will be approve for publishing. 
+
+
+# 4. Concluding statements:<a class="anchor" id="ID4"></a>
+
+**Furture work**
+- Gather more balanced data (i.e more hateful comments) instead of using Oversampler to balance data since the model will be trained on similar tokens that posed hateful context which might not be reliable in classifying unseen data.
+
+- Gather wider range of context of videos for better performance on general comments. Since the current model is trained on videos that are more popular among the younger generation, the slangs/lingo use by the population can be different thus affecting the classification results on a comment from a different demographic.
+
+- Removal of the common tokens that appear the most in hateful/non-hateful comments to reduce ambiguity for the model in classifying. This would likely to improve both Precision and Recall scores as it minimizes both False positives and False negatives which will acheive our initial goal of having an auto-classifier without the need of manual filtering.
+
+- The project is targed to detect hateful comments based on the determined weightage of attributes where it emphasises on Toxicity and less on other attributes. This can be adjusted according to the user's objective.
+    - For example, to detect for possible suicidal/troubled youths or radicalized potential terrorists by adjusting higher weightage on the Threat attribute. To detect for individuals that attempts to disrupt racial harmony through racist remarks, the user can adjust higher weightage on the Identity_attack attribute.
