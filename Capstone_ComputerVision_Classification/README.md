@@ -60,6 +60,8 @@ How it works:
 - MobileNetV2 is a CNN architecture designed for mobile and embedded devices. It uses [depthwise separable convolutions](https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728) to reduce computational complexity with a more efficient method used to convolute images.Thus it is choosen as it maintains accuracy and provide good balance between computational efficiency and performance in image classification tasks. 
 
 - Infographic of this feature as shown below:
+
+
 ![Depthwise seperable info](https://github.com/nichyuen/Projects/blob/main/Capstone_ComputerVision_Classification/README%20images/depthwise%20seperable%20convultion%20infograph.png)
 
 2. [MobileNetV3](https://arxiv.org/pdf/1905.02244v5.pdf)
