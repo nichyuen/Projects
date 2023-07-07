@@ -5,8 +5,8 @@ MOH will want to intstill preventive measures such as hate speech or online bull
 As an analyst in MOH, the task at hand to have an effective classifying model to process text comments 
 
 - Acceptance performance metric:
-        - >0.75 for Recall, since the main objective is to effectively filter hateful comments (i.e Minimise false negatives).
-        - >0.65 for Precision, less emphasis on minimising false positives but still important to a degree to ensure freedom of speech is maintained.
+        - At least 0.75 for Recall, since the main objective is to effectively filter hateful comments (i.e Minimise false negatives).
+        - At least 0.65 for Precision, less emphasis on minimising false positives but still important to a degree to ensure freedom of speech is maintained.
 
 **Notebooks**<br>
 
