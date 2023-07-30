@@ -69,8 +69,6 @@ Summary of dataframe that is mainly worked on:
 
 - The model have been predicted mostly on periods without shocks thus the degree of performance loss have yet to be evaluated. Thus, it is needed to regularly train the model with recent data so the early information of shocks is learned by the model which might be able to predict an upcoming shock.
 
-- Removal of the common tokens that appear the most in hateful/non-hateful comments to reduce ambiguity for the model in classifying. This would likely to improve both Precision and Recall scores as it minimizes both False positives and False negatives which will acheive our initial goal of having an auto-classifier without the need of manual filtering.
-
 - The weather features used for training are currently lagged by 2 weeks. Since the targeted prediction is in 12 weeks (i.e 3 months), it implies there is a need to use 10 weeks for forecasted weather data for predictions. Therefore the prediciting capability of the model is dependent also on the accuracy of the 10-day weather forecast.
     
 - For more inclusive and accurate cost averted calculation, can collect more information on the economic cost of DHF, a more severe case of dengue fever, and also other related mosquito transmitted diseases such as Yellow fever and Zika.
